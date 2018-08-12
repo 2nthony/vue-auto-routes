@@ -1,0 +1,24 @@
+{
+  "name": "@evila/vue-auto-routes",
+  "description": "A hack way to auto generate vue routes",
+  "version": "0.1.5",
+  "main": "index.js",
+  "author": "evila <ijoec123@gmail.com>",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evillt/vue-auto-routes.git"
+  },
+  "homepage": "https://github.com/evillt/vue-auto-routes",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "vue-auto-routes"
+  ],
+  "dependencies": {
+    "chokidar": "^2.0.4",
+    "fast-glob": "^2.2.2",
+    "prettier": "^1.14.0"
+  }
+}

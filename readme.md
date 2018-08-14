@@ -4,9 +4,8 @@
 
 # Notice ️️⚡️
 
-- **Only test on webpack v4.x**
-- Known bugs 🐞
-  - Now rename a page file will **ERROR**.
+- Only test on webpack v4.x
+- [Known bugs 🐞](https://github.com/evillt/vue-auto-routes/labels/bug)
 
 # Install
 

@@ -5,6 +5,8 @@
 # Notice ️️⚡️
 
 - **Only test on webpack v4.x**
+- Known bugs 🐞
+  - Now rename a page file will **ERROR**.
 
 # Install
 

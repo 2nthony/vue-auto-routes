@@ -2,9 +2,9 @@
 
 > A **hack way** to auto generate vue routes.
 
-# Notice
+# Notice ️️⚡️
 
-- ⚡️ Only test on webpack v4.x
+- **Only test on webpack v4.x**
 
 # Install
 
@@ -20,7 +20,7 @@ npm install --save @evila/vue-auto-routes
 |--- pages/
     |--- foo/
     |   |- index.vue
-    |--- _id.vue
+    |--- _id.vue // dynamicRoute, same with folder
     |--- index.vue
 |- webpack.config.js
 

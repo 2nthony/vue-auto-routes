@@ -6,7 +6,7 @@
   "author": "evila <ijoec123@gmail.com>",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/evillt/vue-auto-routes/issues"
+    "url": "https://github.com/evillt/vue-auto-routes/labels/bug"
   },
   "repository": {
     "type": "git",

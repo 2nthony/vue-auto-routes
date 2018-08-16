@@ -2,10 +2,10 @@
 
 > A **hack way** to auto generate vue routes.
 
-# Notice ️️⚡️
+# Notice ️⚡️
 
 - Only test on webpack v4.x
-- [Known bugs 🐞](https://github.com/evillt/vue-auto-routes/labels/bug)
+- [Notice me 🐞](#env)
 
 # Install
 
@@ -72,7 +72,7 @@ All `.vue` files will auto join `vue-routes` under `pages` directory (same with 
 
 ### importPrefix
 - Type: `String`
-- Default: `@/pages`
+- Default: `'@/pages'`
 
 Depend on `config.resolve.alias['@']`
 
@@ -100,4 +100,19 @@ Make sure already set `dynamicImport` is `true`
 
 ```js
 const component = () => import(/* webpackChunkName: 'myRoutes' */ '@/pages/component.vue')
+```
+
+### env
+- Type: `String`
+- Default: `'NODE_ENV'`
+
+This is a **un-friendly** option.
+
+Work well in `development` mode
+
+But when you build to `production` version still need you set a filed is `production` in command line.
+
+```bash
+# example scripts command
+cross-env NODE_ENV=production webpack --config webpack.config.js
 ```

@@ -106,7 +106,7 @@ const component = () => import(/* webpackChunkName: 'myRoutes' */ '@/pages/compo
 - Type: `String`
 - Default: `'NODE_ENV'`
 
-This is a **un-friendly** option.
+This is an **un-friendly** option.
 
 Work well in `development` mode
 
@@ -116,3 +116,5 @@ But when you build to `production` version still need you set a filed is `produc
 # example scripts command
 cross-env NODE_ENV=production webpack --config webpack.config.js
 ```
+
+Will get `NODE_ENV` value

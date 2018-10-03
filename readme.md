@@ -71,7 +71,7 @@ e.g. `['**/src']`
 - Type: `Array<String>`
 - Default: `['vue']`
 
-All `.vue` files will auto join `vue-routes` under `pages` directory (same with `['vue', 'js']`)
+All `.vue` files will auto resolved (same with `['vue', 'js']`)
 
 ### dynamicImport
 - Type: `Boolean`

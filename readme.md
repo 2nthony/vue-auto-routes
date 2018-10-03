@@ -2,46 +2,49 @@
 
 > A **hack way** to auto generate vue routes.
 
-# Notice ️⚡️
-
-- Only test on webpack v4.x
-- [Notice me 🐞](#env)
-
 # Install
 
 ```bash
-npm install --save @evila/vue-auto-routes
+yarn add vue-auto-routes
+# prefer npm
+npm i -S vue-auto-routes
 ```
 
 # Usage
 
-```js
-// example directory
-|- src/
-|--- pages/
-    |--- foo/
-    |   |- index.vue
-    |--- _id.vue // dynamicRoute, same with folder
-    |--- index.vue
-|- webpack.config.js
+example directory
 
-// webpack.config.js
-const VueAutoRoutes = require('@evila/vue-auto-routes/lib/plugin')
+```bash
+.
+│── src
+│── pages
+│   │── foo
+│   │   └── index.vue
+│   │── _id.vue       # dynamicRoute, same with folder
+│   └── index.vue
+└── webpack.config.js
+```
+
+webpack.config.js
+
+```js
+const VueAutoRoutes = require('vue-auto-routes/lib/plugin')
 
 module.exports = {
   plugins: [
     new VueAutoRoutes({
-      pages: require('path').resolve(__dirname, './src/pages')
+      dir: require('path').resolve(__dirname, 'src/pages')
     })
   ]
 }
+```
 
-// router.js
-import routes from '@evila/vue-auto-routes'
+router.js
+
+```js
+import routes from 'vue-auto-routes'
 
 export default new Router({ routes })
-
-console.log(routes) // Check about it!
 ```
 
 # Params
@@ -50,7 +53,7 @@ console.log(routes) // Check about it!
 
 ## options
 
-### pages
+### dir
 - Type: `String`
 - Required: `true`
 
@@ -60,61 +63,18 @@ Pages directory, recommand to use `path` module
 - Type: `Array<String>`
 - Default: `[]`
 
-Ignore some directory you don't wanna include into routes under `pages` directory
+Ignore some directory you don't wanna include into routes under [dir](#dir)
 
-e.g. `['**/src/components']`
+e.g. `['**/src']`
 
-### extensions
+### exts
 - Type: `Array<String>`
 - Default: `['vue']`
 
 All `.vue` files will auto join `vue-routes` under `pages` directory (same with `['vue', 'js']`)
-
-### importPrefix
-- Type: `String`
-- Default: `'@/pages'`
-
-Depend on `config.resolve.alias['@']`
-
-```js
-import component from '@/pages/component.vue'
-```
 
 ### dynamicImport
 - Type: `Boolean`
 - Default: `false`
 
 If set `true`, please make sure is using `babel` and `babel-plugin-syntax-dynamic-import` in project
-
-```js
-const component = () => import('@/pages/component.vue')
-```
-
-### webpackChunkName
-- Type: `String`
-- Default: `''`
-
-Make sure already set `dynamicImport` is `true`
-
-`{ webpackChunkName: 'myRoutes' }`
-
-```js
-const component = () => import(/* webpackChunkName: 'myRoutes' */ '@/pages/component.vue')
-```
-
-### env
-- Type: `String`
-- Default: `'NODE_ENV'`
-
-This is an **un-friendly** option.
-
-Work well in `development` mode
-
-But when you build to `production` version still need you set a filed is `production` in command line.
-
-```bash
-# example scripts command
-cross-env NODE_ENV=production webpack --config webpack.config.js
-```
-
-Will get `NODE_ENV` value

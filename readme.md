@@ -1,6 +1,12 @@
+> This readme is out of date, rewrite this soon...
+
 # vue-auto-routes
 
 > A **hack way** to auto generate vue routes.
+
+[![NPM version](https://flat.badgen.net/npm/v/vue-auto-routes?icon=npm)](https://npmjs.com/package/vue-auto-routes)
+![NPM downloads](https://flat.badgen.net/npm/dt/vue-auto-routes?icon=npm)
+![License](https://flat.badgen.net/npm/license/vue-auto-routes)
 
 # Install
 

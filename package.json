@@ -1,10 +1,10 @@
 {
   "name": "vue-auto-routes",
   "description": "A hack way to auto generate vue routes",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "main": "index.js",
   "author": "evila <ijoec123@gmail.com>",
-  "license": "WTFPL",
+  "license": "MIT",
   "files": [
     "lib"
   ],
@@ -23,6 +23,7 @@
     "vue-auto-routes"
   ],
   "dependencies": {
-    "chokidar": "^2.0.4"
+    "chokidar": "^2.0.4",
+    "lodash.sortby": "^4.7.0"
   }
 }

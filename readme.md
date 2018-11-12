@@ -1,5 +1,3 @@
-> This readme is out of date, rewrite this soon...
-
 # vue-auto-routes
 
 > A **hack way** to auto generate vue routes.
@@ -13,22 +11,22 @@
 ```bash
 yarn add vue-auto-routes
 # prefer npm
-npm i -S vue-auto-routes
+npm i vue-auto-routes -S
 ```
 
 # Usage
 
 example directory
 
-```bash
-.
-│── src
-│── pages
-│   │── foo
-│   │   └── index.vue
-│   │── _id.vue       # dynamicRoute, same with folder
-│   └── index.vue
-└── webpack.config.js
+```js
+// index.vue -> /
+// about.vue -> /about
+// user.vue -> /user
+// user/index.vue -> /user, child ''
+// user/friends.vue -> /user, child 'friends'
+// catalog/index.vue -> /catalog
+// catalog/specials.vue -> /catalog/specials
+// _path.vue -> /:path
 ```
 
 webpack.config.js
@@ -39,7 +37,7 @@ const VueAutoRoutes = require('vue-auto-routes/lib/plugin')
 module.exports = {
   plugins: [
     new VueAutoRoutes({
-      dir: require('path').resolve(__dirname, 'src/pages')
+      pagesDir: require('path').resolve(__dirname, 'pages')
     })
   ]
 }
@@ -48,39 +46,58 @@ module.exports = {
 router.js
 
 ```js
-import routes from 'vue-auto-routes'
+import { routes } from 'vue-auto-routes'
 
 export default new Router({ routes })
 ```
 
-# Params
+# API
 
 `new VueAutoRoutes([options<object>])`
 
 ## options
+Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/ream/collect-fs-routes#optionspagesdir), but **differences** with these following
 
-### dir
-- Type: `String`
+### pagesDir
+- Type: `string`
 - Required: `true`
 
-Pages directory, recommand to use `path` module
+Pages directory, it should be an _**absolute path**_.
 
-### ignore
-- Type: `Array<String>`
-- Default: `[]`
+### ~~componentPrefix~~
 
-Ignore some directory you don't wanna include into routes under [dir](#dir)
+### match
+- Type: `string` `RegExp`
+- Default: `'vue'` `/\.vue$/`
 
-e.g. `['**/src']`
+It used to match page components.
 
-### exts
-- Type: `Array<String>`
-- Default: `['vue']`
-
-All `.vue` files will auto resolved (same with `['vue', 'js']`)
-
-### dynamicImport
-- Type: `Boolean`
+### routesMap
+- Type: `boolean`
 - Default: `false`
 
-If set `true`, please make sure is using `babel` and `babel-plugin-syntax-dynamic-import` in project
+Get a fullPath list of each route.
+
+```js
+import { routesMap } from 'vue-auto-routes'
+
+[
+  '/',
+  '/about',
+  '/foo/takemehome',
+  ...
+]
+```
+
+# Other
+[@ream/collect-fs-routes](https://github.com/ream/collect-fs-routes#optionspagesdir) Offical usage like.
+
+```js
+const { collectRoutes, renderRoutes, renderRoutesMap } = require('vue-auto-routes/lib/collect-fs-routes')
+
+const routes = await collectRoutes(options)
+const routesString = renderRoutes(routes)
+const routesMap = renderRoutesMap(routes)
+```
+
+Options for [options](#options)

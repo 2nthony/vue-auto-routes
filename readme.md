@@ -101,3 +101,6 @@ const routesMap = renderRoutesMap(routes)
 ```
 
 Options for [options](#options)
+
+# License
+MIT

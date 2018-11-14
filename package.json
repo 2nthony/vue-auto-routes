@@ -25,5 +25,10 @@
   "dependencies": {
     "chokidar": "^2.0.4",
     "lodash.sortby": "^4.7.0"
+  },
+  "xo": {
+    "space": true,
+    "semicolon": false,
+    "prettier": true
   }
 }

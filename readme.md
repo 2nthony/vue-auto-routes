@@ -8,7 +8,7 @@
 
 # Install
 
-```bash
+```sh
 yarn add vue-auto-routes
 # prefer npm
 npm i vue-auto-routes -S

@@ -32,7 +32,7 @@ Example directory
 
 See [https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode](https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode)
 
-But SHOULD NOT create a same route file.
+But SHOULD NOT create two or more same route files.
 
 webpack.config.js
 

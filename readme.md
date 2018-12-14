@@ -16,7 +16,7 @@ npm i vue-auto-routes -S
 
 # Usage
 
-example directory
+Example directory
 
 ```js
 // index.vue -> /
@@ -27,7 +27,12 @@ example directory
 // catalog/index.vue -> /catalog
 // catalog/specials.vue -> /catalog/specials
 // _path.vue -> /:path
+// {path}.vue -> /:path  props: true
 ```
+
+See [https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode](https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode)
+
+But SHOULD NOT create a same route file.
 
 webpack.config.js
 
@@ -37,7 +42,7 @@ const VueAutoRoutes = require('vue-auto-routes/lib/plugin')
 module.exports = {
   plugins: [
     new VueAutoRoutes({
-      pagesDir: require('path').resolve(__dirname, 'pages')
+      pagesDir: require('path').resolve(__dirname, 'src/pages')
     })
   ]
 }
@@ -48,7 +53,7 @@ router.js
 ```js
 import { routes } from 'vue-auto-routes'
 
-export default new Router({ routes })
+export default new VueRouter({ routes })
 ```
 
 # API
@@ -72,23 +77,6 @@ Pages directory, it should be an _**absolute path**_.
 
 It used to match page components.
 
-### routesMap
-- Type: `boolean`
-- Default: `false`
-
-Get a fullPath list of each route.
-
-```js
-import { routesMap } from 'vue-auto-routes'
-
-[
-  '/',
-  '/about',
-  '/foo/takemehome',
-  ...
-]
-```
-
 # Other
 [@ream/collect-fs-routes](https://github.com/ream/collect-fs-routes#optionspagesdir) Offical usage like.
 
@@ -97,7 +85,7 @@ const { collectRoutes, renderRoutes, renderRoutesMap } = require('vue-auto-route
 
 const routes = await collectRoutes(options)
 const routesString = renderRoutes(routes)
-const routesMap = renderRoutesMap(routes)
+const routesMap = renderRoutesMap(routes) // Get a fullPath list of each route
 ```
 
 Options for [options](#options)

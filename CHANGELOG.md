@@ -1,3 +1,9 @@
+# 1.2.0
+
+New API option
+
+watchMode: Watching pages directory to auto update routes
+
 # 1.1.21
 
 New match dynamic route type

@@ -77,6 +77,12 @@ Pages directory, it should be an _**absolute path**_.
 
 It used to match page components.
 
+### watchMode
+- Type: `boolean`
+- Default: `true` in `webpack-dev-server` and `webpack-dev-middleware`, `false` otherwise
+
+Watching pages directory to auto update routes.
+
 # Other
 [@ream/collect-fs-routes](https://github.com/ream/collect-fs-routes#optionspagesdir) Offical usage like.
 

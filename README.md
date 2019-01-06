@@ -61,7 +61,7 @@ export default new VueRouter({ routes })
 `new VueAutoRoutes([options<object>])`
 
 ## options
-Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/ream/collect-fs-routes#optionspagesdir), but **differences** with these following
+Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/ream/collect-fs-routes#api), but **differences** with these following
 
 ### pagesDir
 - Type: `string`

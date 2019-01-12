@@ -9,7 +9,10 @@
     "lib"
   ],
   "scripts": {
-    "install": "echo 'exports.routes = []' > index.js"
+    "install": "echo 'export const routes = []' > index.js",
+    "test": "dvan test/index.js --config test/dvan.config.js --no-clear-console",
+    "dev": "yarn test --dev",
+    "build": "yarn test"
   },
   "repository": {
     "type": "git",
@@ -29,5 +32,11 @@
   "xo": {
     "space": true,
     "prettier": true
+  },
+  "devDependencies": {
+    "dvan": "^2.2.2",
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.2",
+    "vue-template-compiler": "^2.5.21"
   }
 }

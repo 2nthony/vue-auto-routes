@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "install": "echo 'export const routes = []' > index.js",
-    "test": "dvan test/index.js --config test/dvan.config.js --no-clear-console",
+    "test": "dvan example/index.js --config example/dvan.config.js --no-clear-console",
     "dev": "yarn test --dev",
     "build": "yarn test"
   },

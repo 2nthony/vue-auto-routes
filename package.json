@@ -1,7 +1,7 @@
 {
   "name": "vue-auto-routes",
   "description": "A hack way to auto generate vue routes",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "main": "index.js",
   "author": "evila <ijoec123@gmail.com>",
   "license": "MIT",

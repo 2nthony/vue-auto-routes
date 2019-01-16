@@ -49,7 +49,7 @@ a {
   font-weight: 500;
   text-decoration: none;
 }
-.content {
+.Page-404 {
   padding: 2rem;
   max-width: 740px;
   margin: 0 auto;

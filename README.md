@@ -58,7 +58,7 @@ export default new VueRouter({ routes })
 
 # API
 
-`new VueAutoRoutes([options<object>])`
+`new VueAutoRoutes(options: object)`
 
 ## options
 Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/ream/collect-fs-routes#api), but **differences** with these following
@@ -77,11 +77,19 @@ Pages directory, it should be an _**absolute path**_.
 
 It used to match page components.
 
+We use `,` to split match file extension when is a string.
+
 ### watchMode
 - Type: `boolean`
 - Default: `true` in `webpack-dev-server` and `webpack-dev-middleware`, `false` otherwise
 
 Watching pages directory to auto update routes.
+
+### default404
+- Type: `boolean`
+- Default: `true`
+
+Use internal 404 page for mismatch route. You can create a `404.{#match}` in your `pagesDir` to instead of it or set it `false`.
 
 # Other
 [@ream/collect-fs-routes](https://github.com/ream/collect-fs-routes#optionspagesdir) Offical usage like.

@@ -28,6 +28,7 @@ Example directory
 // catalog/specials.vue -> /catalog/specials
 // _path.vue -> /:path
 // {path}.vue -> /:path  props: true
+// 404.vue -> *
 ```
 
 See [https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode](https://router.vuejs.org/guide/essentials/passing-props.html#boolean-mode)

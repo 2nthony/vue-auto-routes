@@ -6,7 +6,9 @@
   "author": "evila <ijoec123@gmail.com>",
   "license": "MIT",
   "files": [
-    "lib"
+    "lib",
+    "plugin.js",
+    "404.vue"
   ],
   "scripts": {
     "install": "echo 'export const routes = []' > index.js",

@@ -25,7 +25,8 @@
     "vue",
     "router",
     "vue-router",
-    "vue-auto-routes"
+    "vue-auto-routes",
+    "it-works"
   ],
   "dependencies": {
     "lodash.sortby": "^4.7.0"

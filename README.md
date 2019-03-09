@@ -43,7 +43,7 @@ const VueAutoRoutes = require('vue-auto-routes/lib/plugin')
 module.exports = {
   plugins: [
     new VueAutoRoutes({
-      pagesDir: require('path').resolve(__dirname, 'src/pages')
+      dir: require('path').resolve(__dirname, 'src/pages')
     })
   ]
 }
@@ -64,7 +64,7 @@ export default new VueRouter({ routes })
 ## options
 Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/ream/collect-fs-routes#api), but **differences** with these following
 
-### pagesDir
+### dir
 - Type: `string`
 - Required: `true`
 
@@ -90,10 +90,10 @@ Watching pages directory to auto update routes.
 - Type: `boolean`
 - Default: `true`
 
-Use internal 404 page for mismatch route. You can create a `404.{#match}` in your `pagesDir` to instead of it or set it `false`.
+Use internal 404 page for mismatch route. You can create a `404.{#match}` in your `dir` to instead of it or set it `false`.
 
 # Other
-[@ream/collect-fs-routes](https://github.com/ream/collect-fs-routes#optionspagesdir) Offical usage like.
+[@ream/collect-fs-routes](https://github.com/ream/collect-fs-routes#optionsdir) Offical usage like.
 
 ```js
 const { collectRoutes, renderRoutes, renderRoutesMap } = require('vue-auto-routes/lib/collect-fs-routes')

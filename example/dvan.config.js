@@ -3,7 +3,7 @@ module.exports = {
     config.resolve.alias.set('vue$', 'vue/dist/vue.esm')
     config.plugin('auto-routes').use(require('../plugin'), [
       {
-        pagesDir: require('path').resolve(__dirname, 'src/pages')
+        dir: require('path').resolve(__dirname, 'src/pages')
       }
     ])
   }

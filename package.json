@@ -12,9 +12,9 @@
   ],
   "scripts": {
     "install": "echo 'export const routes = []' > index.js",
-    "test": "dvan example/index.js --config example/dvan.config.js --no-clear-console",
-    "dev": "yarn test --dev",
-    "build": "yarn test"
+    "example": "dvan example/index.js --config example/dvan.config.js --no-clear-console",
+    "dev": "yarn example --dev",
+    "build": "yarn example"
   },
   "repository": {
     "type": "git",

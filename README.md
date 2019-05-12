@@ -2,8 +2,8 @@
 
 > Auto generate vue routes
 
-[![NPM version](https://badgen.net/npm/v/vue-auto-routes)](https://npmjs.com/package/vue-auto-routes)
-[![NPM download](https://badgen.net/npm/dm/vue-auto-routes)](https://npmjs.com/package/vue-auto-routes)
+[![NPM version](https://badgen.net/npm/v/vue-auto-routes?icon=npm)](https://npmjs.com/package/vue-auto-routes)
+[![NPM download](https://badgen.net/npm/dm/vue-auto-routes?icon=npm)](https://npmjs.com/package/vue-auto-routes)
 [![CircleCI](https://badgen.net/circleci/github/evillt/vue-auto-routes?icon=circleci)](https://circleci.com/gh/evillt/vue-auto-routes/tree/master)
 [![License](https://badgen.net/npm/license/vue-auto-routes)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://patreon.com/evillt)

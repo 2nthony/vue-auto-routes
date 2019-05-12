@@ -1,44 +1,41 @@
 {
   "name": "vue-auto-routes",
-  "description": "A hack way to auto generate vue routes",
-  "version": "1.4.1",
-  "main": "index.js",
-  "author": "evila <ijoec123@gmail.com>",
+  "description": "Auto generate vue routes",
+  "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "evillt/vue-auto-routes"
+  },
+  "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
+  "main": "index.js",
   "files": [
     "lib",
     "plugin.js",
     "404.vue"
   ],
   "scripts": {
-    "install": "echo 'export const routes = []' > index.js",
-    "example": "dvan example/index.js --config example/dvan.config.js --no-clear-console",
-    "dev": "yarn example --dev",
-    "build": "yarn example"
+    "install": "echo 'export const routes = []' > index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "evillt/vue-auto-routes"
-  },
-  "homepage": "https://github.com/evillt/vue-auto-routes",
-  "keywords": [
-    "vue",
-    "router",
-    "vue-router",
-    "vue-auto-routes",
-    "it-works"
-  ],
   "dependencies": {
     "lodash.sortby": "^4.7.0"
   },
-  "xo": {
-    "space": true,
-    "prettier": true
-  },
   "devDependencies": {
-    "dvan": "^2.2.2",
-    "vue": "^2.5.21",
-    "vue-router": "^3.0.2",
-    "vue-template-compiler": "^2.5.21"
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.17.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,json,md}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
   }
 }

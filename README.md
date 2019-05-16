@@ -2,6 +2,8 @@
 
 > Auto generate vue routes
 
+Please consider starring the project to show your ❤️ and support.
+
 [![NPM version](https://badgen.net/npm/v/vue-auto-routes?icon=npm)](https://npmjs.com/package/vue-auto-routes)
 [![NPM download](https://badgen.net/npm/dm/vue-auto-routes?icon=npm)](https://npmjs.com/package/vue-auto-routes)
 [![CircleCI](https://badgen.net/circleci/github/evillt/vue-auto-routes?icon=circleci)](https://circleci.com/gh/evillt/vue-auto-routes/tree/master)

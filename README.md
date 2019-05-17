@@ -20,15 +20,16 @@ yarn add vue-auto-routes
 
 We assume your directory looks like this:
 
-```
+```sh
 src
 ├── views
 │   ├── index.vue
 │   └── about.vue
-└── webpack.config.js
+├── webpack.config.js   # basic webpack project
+└── vue.config.js       # create by vue/cli
 ```
 
-Then in your `webpack.config.js`:
+In your `webpack.config.js`:
 
 ```js
 const VueAutoRoutes = require('vue-auto-routes/plugin')
@@ -39,6 +40,22 @@ module.exports = {
       dir: require('path').resolve(__dirname, 'src/views')
     })
   ]
+}
+```
+
+In your `vue.config.js`:
+
+```js
+const VueAutoRoutes = require('vue-auto-routes/plugin')
+
+module.exports = {
+  chainWebpack(config) {
+    config.plugin('auto-routes').use(VueAutoRoutes, [
+      {
+        dir: require('path').resolve(__dirname, 'src/views')
+      }
+    ])
+  }
 }
 ```
 

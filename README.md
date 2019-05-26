@@ -43,7 +43,7 @@ module.exports = {
 }
 ```
 
-In your `vue.config.js`:
+Or in your `{poi,vue}.config.js`:
 
 ```js
 const VueAutoRoutes = require('vue-auto-routes/plugin')
@@ -59,7 +59,7 @@ module.exports = {
 }
 ```
 
-And in your `router.js`:
+Then in your `router.js`:
 
 ```js
 import { routes } from 'vue-auto-routes'

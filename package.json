@@ -1,6 +1,6 @@
 {
   "name": "vue-auto-routes",
-  "description": "Auto generate vue routes",
+  "description": "🚦Auto generate vue routes like Nuxt.js",
   "version": "0.0.0",
   "license": "MIT",
   "repository": {

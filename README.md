@@ -1,6 +1,6 @@
 # vue-auto-routes
 
-> Auto generate vue routes
+> 🚦Auto generate vue routes like Nuxt.js
 
 Please consider starring the project to show your ❤️ and support.
 

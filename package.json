@@ -12,7 +12,7 @@
   "files": [
     "lib",
     "plugin.js",
-    "404.vue"
+    "404.js"
   ],
   "scripts": {
     "lint": "xo",

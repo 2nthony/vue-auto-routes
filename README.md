@@ -1,3 +1,5 @@
+> Use it with your own risk, we'll rewrite this soon.
+
 # vue-auto-routes
 
 > 🚦Future-Oriented vue routing system
@@ -138,13 +140,11 @@ Use internal 404 page for mismatch route. You can create a `404.{#match}` in you
 ```js
 const {
   collectRoutes,
-  renderRoutes,
-  renderRoutesMap
+  renderRoutes
 } = require('vue-auto-routes/lib/collect-fs-routes')
 
 const routes = await collectRoutes(options)
 const routesString = renderRoutes(routes)
-const routesMap = renderRoutesMap(routes) // Get a fullPath list of each route
 ```
 
 Options for [options](#options)

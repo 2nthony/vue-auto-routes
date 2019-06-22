@@ -1,8 +1,8 @@
 # vue-auto-routes
 
-> 🚦Auto generate vue routes like Nuxt.js
+> 🚦Future-Oriented vue routing system
 
-Please consider starring the project to show your ❤️ and support.
+Please consider starring the project to show your <font color="red">❤</font> and support.
 
 [![NPM version](https://badgen.net/npm/v/vue-auto-routes?icon=npm)](https://npmjs.com/package/vue-auto-routes)
 [![NPM download](https://badgen.net/npm/dm/vue-auto-routes?icon=npm)](https://npmjs.com/package/vue-auto-routes)
@@ -10,9 +10,17 @@ Please consider starring the project to show your ❤️ and support.
 [![License](https://badgen.net/npm/license/vue-auto-routes)](./LICENSE)
 [![donate](https://badgen.net/badge/support%20me/donate/f2a)](https://patreon.com/evillt)
 
+## Features
+
+- Dynamic routing system `$id.vue`
+- Support props mode `{id}.vue`
+- Auto add new route to routes map, free you hands!
+
+For details see [routing convertion](#routing-convertion)
+
 ## Install
 
-```console
+```sh
 yarn add vue-auto-routes
 ```
 
@@ -67,7 +75,7 @@ import { routes } from 'vue-auto-routes'
 export default new VueRouter({ routes })
 ```
 
-## Files Convertion
+## Routing Convertion
 
 ```js
 // index.vue -> /
@@ -77,7 +85,8 @@ export default new VueRouter({ routes })
 // user/friends.vue -> /user, child 'friends'
 // catalog/index.vue -> /catalog
 // catalog/specials.vue -> /catalog/specials
-// _path.vue -> /:path
+// $path.vue -> /:path
+// _path.vue -> /:path    // !!deprecated!!
 // {path}.vue -> /:path  props: true
 // 404.vue -> *
 ```

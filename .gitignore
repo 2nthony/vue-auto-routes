@@ -2,3 +2,5 @@ node_modules/
 .DS_Store
 /index.js
 dist
+__test__/*.md
+__test__/*.snap

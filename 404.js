@@ -1,4 +1,3 @@
-<script>
 export default {
   functional: true,
   render(h) {
@@ -29,4 +28,3 @@ export default {
     )
   }
 }
-</script>

@@ -17,8 +17,7 @@
   "scripts": {
     "lint": "xo",
     "test": "npm run lint && ava --verbose",
-    "install": "echo 'export const routes = []' > index.js",
-    "example": "poi --config __test__/poi.config.js"
+    "install": "echo 'export const routes = []' > index.js"
   },
   "dependencies": {
     "lodash.sortby": "^4.7.0"
@@ -30,11 +29,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
-    "poi": "^12.6.10",
     "prettier": "^1.17.0",
-    "vue": "^2.6.10",
-    "vue-router": "^3.0.6",
-    "vue-template-compiler": "^2.6.10",
     "xo": "^0.23.0"
   },
   "xo": {

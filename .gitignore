@@ -2,4 +2,3 @@ node_modules/
 .DS_Store
 /index.js
 dist
-test/snapshots

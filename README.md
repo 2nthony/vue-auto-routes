@@ -1,6 +1,6 @@
 > Use it with your own risk, we'll rewrite this soon.
 
-# vue-auto-routes
+![](https://user-images.githubusercontent.com/19513289/59971813-06ab8000-95b6-11e9-8b6b-627af2c2f1ae.png)
 
 > 🚦Future-Oriented vue routing system
 

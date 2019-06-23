@@ -47,7 +47,7 @@ const VueAutoRoutes = require('vue-auto-routes/plugin')
 module.exports = {
   plugins: [
     new VueAutoRoutes({
-      dir: require('path').resolve(__dirname, 'src/views')
+      dir: 'src/views'
     })
   ]
 }
@@ -62,7 +62,7 @@ module.exports = {
   chainWebpack(config) {
     config.plugin('auto-routes').use(VueAutoRoutes, [
       {
-        dir: require('path').resolve(__dirname, 'src/views')
+        dir: 'src/views'
       }
     ])
   }

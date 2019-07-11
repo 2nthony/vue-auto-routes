@@ -106,7 +106,7 @@ Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/
 - Type: `string`
 - Required: `true`
 
-Routes directory, it should be an _**absolute path**_.
+Routes directory, e.g. `src/views`.
 
 ### ~~componentPrefix~~
 

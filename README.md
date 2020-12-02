@@ -32,11 +32,11 @@ We assume your directory looks like this:
 
 ```sh
 src
-├── views
-│   ├── index.vue
-│   └── about.vue
-├── webpack.config.js   # basic webpack project
-└── vue.config.js       # create by vue/cli
+└── views
+    ├── index.vue
+    └── about.vue
+webpack.config.js   # basic webpack project
+vue.config.js       # create by vue/cli
 ```
 
 In your `webpack.config.js`:
@@ -131,7 +131,7 @@ Watching pages directory to auto update routes.
 - Type: `boolean`
 - Default: `true`
 
-Use internal 404 page for mismatch route. You can create a `404.{#match}` in your `dir` to instead of it or set it `false`.
+Use internal 404 page for mismatch route. You can create a `404.${match}` in your `dir` to instead of it or set it `false`.
 
 # Other
 

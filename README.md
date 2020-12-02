@@ -108,6 +108,13 @@ Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/
 
 Routes directory, e.g. `src/views`.
 
+### next
+
+- Type: `boolean`
+- Default: `false`
+
+Vue router next [See migration](https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes).
+
 ### ~~componentPrefix~~
 
 ### match

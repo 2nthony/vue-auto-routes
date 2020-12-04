@@ -12,12 +12,12 @@
   "files": [
     "lib",
     "plugin.js",
-    "404.vue"
+    "404.vue",
+    "index.js"
   ],
   "scripts": {
     "lint": "xo",
-    "test": "npm run lint && ava --verbose",
-    "install": "echo 'export const routes = []' > index.js"
+    "test": "npm run lint && ava --verbose"
   },
   "dependencies": {
     "lodash.sortby": "^4.7.0"
@@ -30,6 +30,7 @@
     "husky": "^1.0.0-rc.13",
     "lint-staged": "^7.2.0",
     "prettier": "^1.17.0",
+    "vue-router": "^4.0.0-rc.6",
     "xo": "^0.23.0"
   },
   "xo": {

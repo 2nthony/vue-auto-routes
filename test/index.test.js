@@ -8,9 +8,14 @@ const options = {
   match: 'vue,js'
 }
 
+const route404 = {
+  path: '/404',
+  component: path.relative(process.cwd(), path.join(__dirname, '../404.vue'))
+}
+
 test('main', async t => {
   const routes = await collectRoutes(options)
-  const routesString = renderRoutes(routes, {
+  const routesString = renderRoutes([...routes, route404], {
     componentPrefix: ''
   })
 
@@ -18,24 +23,12 @@ test('main', async t => {
   t.snapshot(routesString, 'render routes')
 })
 
-test('next', async t => {
+test('v4', async t => {
   const routes = await collectRoutes(options)
-  const routesString = renderRoutes(
-    [
-      ...routes,
-      {
-        path: '/404',
-        component: path.relative(
-          process.cwd(),
-          path.join(__dirname, '../404.vue')
-        )
-      }
-    ],
-    {
-      componentPrefix: '',
-      next: true
-    }
-  )
+  const routesString = renderRoutes([...routes, route404], {
+    componentPrefix: '',
+    v4: true
+  })
 
   t.snapshot(JSON.stringify(routes), 'collect routes')
   t.snapshot(routesString, 'render routes')

@@ -1,5 +1,3 @@
-> Use it with your own risk, we'll rewrite this soon.
-
 ![](https://user-images.githubusercontent.com/19513289/59971813-06ab8000-95b6-11e9-8b6b-627af2c2f1ae.png)
 
 > 🚦Future-Oriented vue routing system
@@ -73,8 +71,12 @@ Then in your `router.js`:
 
 ```js
 import { routes } from 'vue-auto-routes'
-
+// v3
 export default new VueRouter({ routes })
+// v4
+export const router = createRouter({
+  routes
+})
 ```
 
 ## Routing Convertion
@@ -108,10 +110,13 @@ Since `v1.1.11` options for [@ream/collect-fs-routes v1.0.2](https://github.com/
 
 Routes directory, e.g. `src/views`.
 
-### next
+### ~~next~~
 
+- Deprecated
 - Type: `boolean`
 - Default: `false`
+
+Now we recognize v4 automatically. Do not need this anymore.
 
 Vue router next [See migration](https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes).
 
